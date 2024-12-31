@@ -8,6 +8,9 @@ parser.add_argument("-p", "--points",
 parser.add_argument("-H", "--health",
                     help="Quantity of health",
                     type=int)
+parser.add_argument("-t", "--test",
+                    help="Does not output result into file",
+                    action="store_true")
 args = parser.parse_args()
 
 name = input("Nome: ")
@@ -24,7 +27,7 @@ while not got_race:
         got_race = False
 
 status_points = (args.points or random.randrange(16, 24))
-print("Você tem", status_points, "para gastar em status")
+print("Você tem", status_points, "pontos para gastar em status")
 print("Os status são:\n - Força\n - Destreza\n - Agilidade\n - Percepção\n - Carisma\n")
 
 def intput(prompt):
@@ -73,8 +76,9 @@ while status_points != 0:
 
 health = (args.health or 20)
 
-with open("./personagens/" + name + ".txt", "w") as character_file:
-    character_file.write("Nome: " + name + "\n")
+if not args.test:
+    with open("./personagens/" + name + ".txt", "w") as character_file:
+        character_file.write("Nome: " + name + "\n")
     character_file.write("HP: " + str(health) + "/" + str(health) + "\n")
     character_file.write("Raça: " + race + "\n")
     character_file.write("Força: " + str(strength) + "\n")
