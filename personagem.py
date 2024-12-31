@@ -1,4 +1,14 @@
 import random
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-p", "--points",
+                    help="Quantity of stats points",
+                    type=int)
+parser.add_argument("-H", "--health",
+                    help="Quantity of health",
+                    type=int)
+args = parser.parse_args()
 
 name = input("Nome: ")
 valid_races = ["Alto", "Anão", "Elfo", "Goblin"]
@@ -13,7 +23,7 @@ while not got_race:
         print("Erro: Raça invalida")
         got_race = False
 
-status_points = random.randrange(16, 24)
+status_points = (args.points or random.randrange(16, 24))
 print("Você tem", status_points, "para gastar em status")
 print("Os status são:\n - Força\n - Destreza\n - Agilidade\n - Percepção\n - Carisma\n")
 
@@ -61,8 +71,11 @@ while status_points != 0:
     rizz, status_points = getstat("Carisma: ", status_points)
     done = True
 
+health = (args.health or 20)
+
 with open("./personagens/" + name + ".txt", "w") as character_file:
     character_file.write("Nome: " + name + "\n")
+    character_file.write("HP: " + str(health) + "/" + str(health) + "\n")
     character_file.write("Raça: " + race + "\n")
     character_file.write("Força: " + str(strength) + "\n")
     character_file.write("Destreza: " + str(dexterity) + "\n")
