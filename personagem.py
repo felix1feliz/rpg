@@ -79,11 +79,11 @@ health = (args.health or 20)
 if not args.test:
     with open("./personagens/" + name + ".txt", "w") as character_file:
         character_file.write("Nome: " + name + "\n")
-    character_file.write("HP: " + str(health) + "/" + str(health) + "\n")
-    character_file.write("Raça: " + race + "\n")
-    character_file.write("Força: " + str(strength) + "\n")
-    character_file.write("Destreza: " + str(dexterity) + "\n")
-    character_file.write("Agilidade: " + str(agility) + "\n")
-    character_file.write("Percepção: " + str(perception) + "\n")
-    character_file.write("Carisma: " + str(rizz) + "\n")
+        character_file.write("HP: " + str(health) + "/" + str(health) + "\n")
+        character_file.write("Raça: " + race + "\n")
+        character_file.write("Força: " + str(strength) + "\n")
+        character_file.write("Destreza: " + str(dexterity) + "\n")
+        character_file.write("Agilidade: " + str(agility) + "\n")
+        character_file.write("Percepção: " + str(perception) + "\n")
+        character_file.write("Carisma: " + str(rizz) + "\n")
 

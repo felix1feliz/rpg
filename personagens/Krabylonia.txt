@@ -1,0 +1,8 @@
+Nome: Krabylonia
+HP: 20/20
+Raça: Anão
+Força: 3
+Destreza: 4
+Agilidade: 4
+Percepção: 5
+Carisma: 2
