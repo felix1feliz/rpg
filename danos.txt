@@ -1,0 +1,11 @@
+TABELA DE DANOS
+
+Espada: 3d8 + Destreza * 2 (Corte|Perfuração)
+Maça: 3d8 + Força * 2
+Lança: 3d8 + Destreza
+Adaga: 3d6 + Destreza
+Faca de cozinha: 3d6 + Destreza
+Arco e flecha: 2d6 + Destreza * 2
+Faca de manteiga: 2d6 + Força
+Socos e chutes: 1d6 + Força
+Arremeço: 1d6 + Força / 2 (agilidade - 1d4 - 1)
